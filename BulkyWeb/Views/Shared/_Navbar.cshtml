@@ -1,21 +1,19 @@
 ﻿<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
     <div class="container">
-        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-face-smile fs-4 pe-2" style="color: #e7ca0d;"></i>BOOK SHOP</a>
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">2LEARN</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin Management</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                        <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
                         <div class="dropdown-divider"></div>

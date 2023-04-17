@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - BulkyWeb</title>
+    <title>@ViewData["Title"]2learn-bookShop</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/BulkyWeb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BulkyBookWeb.styles.css" asp-append-version="true" />
     <!--Icon boostrap 5-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <!--Google Font Mandali-->
@@ -15,10 +15,11 @@
     <!--Toastr-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
 </head>
 <body>
     <header>
-        <partial name="_Navbar" />
+        <partial name="_Navbar"/>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -32,11 +33,12 @@
             Development <i class="bi bi-balloon-heart"></i> 1ambottom
         </div>
     </footer>
-
-
+    <script src="https://cdn.tiny.cloud/1/8a9528tkcxw6waq5ze1frqpoaxqifk4esytusl03hrv4zzqa/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     @await Html.PartialAsync("_ValidationScriptsPartial")
 </body>
