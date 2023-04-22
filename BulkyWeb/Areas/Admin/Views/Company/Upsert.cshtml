@@ -1,0 +1,58 @@
+﻿@model CompanyVM
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-primary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">@(Model.Company.Id != 0 ? "Update" : "Create") Company</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form method="post" class="row">
+            <input asp-for="Company.Id" hidden />
+            <div class="row">
+                <div class="col-12">
+                    <div class="border p-3">
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Company.Name" type="text" class="form-control border-0 shadow" />
+                            <label asp-for="Company.Name" class="ms-2"></label>
+                            <span asp-validation-for="Company.Name" class="text-danger"></span>
+                        </div>
+                        <div class="py-2 col-12">
+                            <label asp-for="Company.StreetAddress" class="ms-2 text-muted"></label>
+                            <textarea asp-for="Company.StreetAddress" class="form-control border-0 shadow " cols="4" rows="4"></textarea>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Company.City" type="text" class="form-control border-0 shadow " />
+                            <label asp-for="Company.City" class="ms-2"></label>
+                            <span asp-validation-for="Company.City" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Company.State" type="text" class="form-control border-0 shadow " />
+                            <label asp-for="Company.State" class="ms-2"></label>
+                            <span asp-validation-for="Company.State" class="text-danger"></span>
+                        </div>
+                        <div class="row">
+                            <div class="form-floating py-2 col-6">
+                                <input asp-for="Company.PostalCode" type="number" class="form-control border-0 shadow " />
+                                <label asp-for="Company.PostalCode" class="ms-2"></label>
+                                <span asp-validation-for="Company.PostalCode" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating py-2 col-6">
+                                <input asp-for="Company.PhoneNumber" type="number" class="form-control border-0 shadow " />
+                                <label asp-for="Company.PhoneNumber" class="ms-2"></label>
+                                <span asp-validation-for="Company.PhoneNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex col-12 btn-group">
+                            <a asp-controller="Home" asp-action="Index" class="col-6 btn btn-secondary">Back to list</a>
+                            <button type="submit" class="col-6 btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
